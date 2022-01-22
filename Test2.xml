@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+
+<suite name ="My First Tests">
+    <test name="My First Test">
+        <groups>
+            <run>
+                <include name="MyGroup"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test2">            </class>
+        </classes>
+    </test>
+</suite>
+
+
