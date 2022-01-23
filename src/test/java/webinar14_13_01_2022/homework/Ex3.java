@@ -8,7 +8,7 @@ package webinar14_13_01_2022.homework;
 import org.testng.annotations.Test;
 import webinar14_13_01_2022.BaseTest;
 
-public class Exercise3 extends BaseTestHomework {
+public class Ex3 extends BaseTestHomework {
     @Test
     public void titleWrite() {
         driver.get("https://testuj.pl/");

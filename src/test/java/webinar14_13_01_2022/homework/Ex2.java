@@ -13,7 +13,7 @@ import webinar14_13_01_2022.BaseTest;
 
 import java.time.Duration;
 
-public class Exercise2 extends BaseTestHomework {
+public class Ex2 extends BaseTestHomework {
     @Test
     public void sendForm() {
         driver.get("https://demoqa.com/text-box");

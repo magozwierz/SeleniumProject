@@ -4,15 +4,13 @@
 //        https://opensource-demo.o
 //        rangehrmlive.com/
 //        b. W polu 'Username' wpisz:
-//        WrongUsername.
+//        Admin.
 //        c. W polu 'Password' wpisz:
-//        WrongPassword.
+//        admin123.
 //        d. Kliknij przycisk Login.
-//        e. Sprawdź, czy wyświetlił się
-//        komunikat o błędnych
-//        danych logowania - Invalid
-//        credentials.
-//        Zadanie 4
+//        e. Upewnij się, że użytkownik
+//        się zalogował.
+//        Zadanie 3
 //        www.testuj.pl
 
 package webinar14_13_01_2022.homework;
@@ -23,18 +21,20 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import webinar14_13_01_2022.BaseTest;
 
-public class Exercise6 extends BaseTestHomework {
+public class Ex5 extends BaseTestHomework {
+
     @Test
-    public void loginFailure() {
+    public void loginToOpenSource() {
         driver.get("https://opensource-demo.orangehrmlive.com/");
         WebElement usernameInput = driver.findElement(By.id("txtUsername"));
         WebElement passwordInput = driver.findElement(By.id("txtPassword"));
         WebElement loginButton = driver.findElement(By.id("btnLogin"));
-        usernameInput.sendKeys("WrongUsername");
-        passwordInput.sendKeys("WrongPassword");
+        usernameInput.sendKeys("Admin");
+        passwordInput.sendKeys("admin123");
         loginButton.click();
-        WebElement invalidCredentialsInfo = driver.findElement(By.id("spanMessage"));
-        Assert.assertTrue(invalidCredentialsInfo.isDisplayed());
+        String url = driver.getCurrentUrl();
+        String expectedURL = "https://opensource-demo.orangehrmlive.com/index.php/dashboard";
+        Assert.assertTrue(url.equals(expectedURL));
 
 
     }

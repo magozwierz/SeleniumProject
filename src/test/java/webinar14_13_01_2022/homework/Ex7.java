@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class Excercise7 extends BaseTestHomework {
+public class Ex7 extends BaseTestHomework {
     @Test
     public void checkBoxPractise() {
         driver.get("https://demoqa.com/checkbox");

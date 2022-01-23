@@ -6,7 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import webinar14_13_01_2022.BaseTest;
 
-public class Exercise1 extends BaseTestHomework {
+public class Ex1 extends BaseTestHomework {
     @Test
     public void properCredentials() {
         driver.get("https://the-internet.herokuapp.com/login");

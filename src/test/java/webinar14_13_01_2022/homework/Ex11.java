@@ -20,7 +20,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class Excercise11 extends BaseTestHomework {
+public class Ex11 extends BaseTestHomework {
     @Test
     public void guruBuy() {
         driver.get("http://demo.guru99.com/payment-gateway/index.php");

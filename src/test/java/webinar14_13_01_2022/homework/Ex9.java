@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-public class Excercise9 extends BaseTestHomework {
+public class Ex9 extends BaseTestHomework {
     @Test
     public void selectMenuPractise() {
         driver.get("https://demoqa.com/select-menu");

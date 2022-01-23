@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class Excercise8 extends BaseTestHomework {
+public class Ex8 extends BaseTestHomework {
     @Test
     public void radioButtonPractise() {
         driver.get("https://demoqa.com/radio-button");

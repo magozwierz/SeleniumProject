@@ -19,7 +19,7 @@ import webinar14_13_01_2022.BaseTest;
 
 import java.util.List;
 
-public class Exercise4 extends BaseTestHomework {
+public class Ex4 extends BaseTestHomework {
     @Test
     public void getAmountOfLinksAndImages() {
         driver.get("https://www.bbc.com");

@@ -13,10 +13,10 @@ public class BaseTestHomework {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Madzia\\Desktop\\Bootcamp\\chromedriver_win32_97\\chromedriver.exe");
         driver = new ChromeDriver();
     }
-
-    @AfterClass
-    public void teraDown() {
-        driver.quit();
-    }
+//
+//    @AfterClass
+//    public void teraDown() {
+//        driver.quit();
+//    }
 
 }
