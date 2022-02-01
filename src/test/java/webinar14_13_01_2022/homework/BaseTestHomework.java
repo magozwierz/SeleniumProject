@@ -6,12 +6,12 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 public class BaseTestHomework {
-    WebDriver driver;
+   public WebDriver driver;
 
     @BeforeClass
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Madzia\\Desktop\\Bootcamp\\chromedriver_win32_97\\chromedriver.exe");
-        driver = new ChromeDriver();
+       driver= new ChromeDriver();
     }
 //
 //    @AfterClass
