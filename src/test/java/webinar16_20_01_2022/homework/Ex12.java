@@ -8,18 +8,14 @@
 
 
 package webinar16_20_01_2022.homework;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import webinar14_13_01_2022.homework.BaseTestHomework;
 
-import java.util.List;
-import java.util.Set;
+
 
 
 public class Ex12 extends BaseTestHomework {

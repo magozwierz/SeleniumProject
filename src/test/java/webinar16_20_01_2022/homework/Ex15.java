@@ -11,16 +11,14 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import webinar14_13_01_2022.homework.BaseTestHomework;
 
-import java.time.Duration;
-import java.util.List;
+
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
+
 
 public class Ex15 extends BaseTestHomework {
 
