@@ -18,6 +18,7 @@ import org.testng.annotations.Test;
 import webinar14_13_01_2022.homework.BaseTestHomework;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -133,8 +134,45 @@ public class Ex15 extends BaseTestHomework {
         alert4.accept();
         Assert.assertEquals(driver.findElement(By.id("promptResult")).getText(), "You entered Magda");
 
+    }
+
+    //Testy dla IFrame:
+    @Test(description = "Testy dla Frames")
+    public void framesTests() {
+        driver.get("https://demoqa.com/frames");
+        driver.manage().window().maximize();
+        WebElement frame1 = driver.findElement(By.id("frame1"));
+        WebElement frame2 = driver.findElement(By.id("frame2"));
+
+        //Test dla frame 1 - przełączenie na frame1 i powrót:
+        driver.switchTo().frame(frame1);
+        Assert.assertTrue(driver.findElement(By.tagName("h1")).getText().contains("This is a sample page"));
+        driver.switchTo().defaultContent();
+        Assert.assertTrue(driver.findElement(By.xpath("//div[contains(text(),'Frames')]")).isDisplayed());
+
+        //Test dla frame2 - przełączenie na frame2 i powrót:
+        driver.switchTo().frame(frame2);
+        Assert.assertTrue(driver.findElement(By.tagName("h1")).getText().contains("This is a sample page"));
+        driver.switchTo().defaultContent();
+        Assert.assertTrue(driver.findElement(By.xpath("//div[contains(text(),'Frames')]")).isDisplayed());
+    }
+
+    @Test(description = "Testy dla Nested Frames")
+    public void nestedTests() {
+        driver.get("https://demoqa.com/nestedframes");
+        driver.manage().window().maximize();
+        WebElement parentFrame = driver.findElement(By.id("frame1"));
+        driver.switchTo().frame(parentFrame);
+        Assert.assertTrue(driver.findElement(By.tagName("body")).getText().contains("Parent frame"));
+        driver.switchTo().frame(0);
+        Assert.assertTrue(driver.findElement(By.xpath("//body//p")).getText().contains("Child Iframe"));
+        driver.switchTo().parentFrame();
+        driver.switchTo().defaultContent();
+        Assert.assertTrue(driver.findElement(By.xpath("//div[contains(text(),'Nested Frames')]")).isDisplayed());
+
 
     }
+
 }
 
 

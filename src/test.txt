@@ -1,0 +1,2 @@
+treść testowa z pliku1
+treść testowa z pliku2
